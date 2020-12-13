@@ -15,7 +15,7 @@ class CorsMiddleware
     public function handle($request, Closure $next)
     {
         $headers = [
-            'Access-Control-Allow-Origin'      => 'http://condescending-cray-3da377.netlify.app',
+            'Access-Control-Allow-Origin'      => 'https://competent-fermat-7b35d4.netlify.app',
             'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE',
             'Access-Control-Allow-Credentials' => 'true',
             'Access-Control-Max-Age'           => '86400',

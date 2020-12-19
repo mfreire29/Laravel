@@ -9,7 +9,7 @@ class ConsultasController extends Controller
 {
     public function index() {
 
-        $consultas = Consultas::all();
+        $consultas = Consultas::orderBy('id', 'desc')->get();
         
         if(count($consultas) > 0){
             return response()->json(['status' => 'OK', 'data' => $consultas, 'Mensaje' => 'Registros de Productos'], 200);

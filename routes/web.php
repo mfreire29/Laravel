@@ -17,8 +17,11 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/consultas', 'ConsultasController@index');
 $router->get('/productos', 'ProductosController@index');
 $router->get('/productos/{id}', 'ProductosController@getProducto');
 $router->post('/productos', 'ProductosController@createProducto');
 $router->post('/productos/{id}', 'ProductosController@updateProducto');
 $router->delete('/productos/{id}', 'ProductosController@destroyProducto');
+
+$router->get('/fcm', 'Controller@index');

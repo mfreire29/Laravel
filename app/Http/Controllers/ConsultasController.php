@@ -17,4 +17,17 @@ class ConsultasController extends Controller
             return response()->json(['status' => 'OK', 'data' => array(), 'Mensaje' => 'Sin Registros de Productos'], 200);
         }
     }
+
+    public function destroyConsulta($id) {
+
+        $consulta = Consultas::find($id);
+        $consulta->delete();
+
+        if($consulta){
+            return response()->json(['status' => 'OK', 'data' => $consulta, 'Mensaje' => 'Registro Eliminado!'], 200);
+        } else {
+            return response()->json(['status' => 'OK', 'data' => array(), 'Mensaje' => 'No se eliminó el producto, vuelve a intentarlo.'], 200);
+        }
+
+    }
 }

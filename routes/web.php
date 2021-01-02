@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/consultas', 'ConsultasController@index');
-$router->delete('/consultas', 'ConsultasController@destroyConsulta');
+$router->delete('/consultas/{id}', 'ConsultasController@destroyConsulta');
 $router->get('/productos', 'ProductosController@index');
 $router->get('/productos/{id}', 'ProductosController@getProducto');
 $router->post('/productos', 'ProductosController@createProducto');
